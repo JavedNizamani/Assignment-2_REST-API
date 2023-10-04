@@ -1,16 +1,18 @@
 const registerUser = require('../model/db.addUser');
 
-const createUser = async (res, req)=>{
+const createUser = async (req, res)=>{
     try{
-        console.log(res.body);
-        const {firstname, lastname, address, city} = res.body;
-        const req = await registerUser.create({
+        console.log(req.body);
+        const {firstname, lastname, address, city} = req.body;
+            await registerUser.create({
             firstname: firstname,
             lastname: lastname,
             address: address,
             city: city
         });
-    }
+            res.send(req.body);
+
+    }                                               // Posting Data to data base table
     catch(error){
         console.error(error.stack);
     }

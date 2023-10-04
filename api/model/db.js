@@ -9,4 +9,4 @@ var connection = new pg.Pool({
     port: dbConfig.PORT
 });
 
-module.exports = connection;
+module.exports = connection;                //Db Connection file connect data to pg / postgres database

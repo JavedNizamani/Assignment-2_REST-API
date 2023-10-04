@@ -5,7 +5,7 @@ const adminRoutes = require('./api/routes/add-user');
 const adminGetUser = require('./api/routes/get-user');
 
 app.use(bodyParser.json());
-app.use('/admin',adminRoutes);
+app.use('/admin',adminRoutes);                              //          /admin/add-users routes 
 app.use('/admin',adminGetUser);
 
 module.exports = app;

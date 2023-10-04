@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const getData = require('../controller/getUserData');
-// const getData = require('../model/db.getUser');
 
-router.get('/get-user/:id',getData.getQueryForDb);          //API called users
-
+router.get('/get-users/:id',getData.getQueryForDb);          
+                            //         /get-users/4 routes here it get id and fetch data from database
 module.exports = router;

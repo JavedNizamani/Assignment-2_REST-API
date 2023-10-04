@@ -15,5 +15,5 @@ const create = async({firstname, lastname, address, city})=>{
     }
 }
 module.exports = {
-    create
+    create                          //SQL connection and query writing
 }

@@ -4,4 +4,4 @@ module.exports = {
     DATABASE : 'api',
     PASSWORD : 'admin123',
     PORT     : 5432
-}
+}                                   // Database Configuration File
