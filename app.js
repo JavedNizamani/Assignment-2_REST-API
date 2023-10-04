@@ -1,10 +1,9 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+const adminRoutes = require('./api/routes/add-user');
 
-app.use( (req, res, next)=>{
-    res.status(200).json({
-        message: "It Works!"
-    });
-});
+app.use(bodyParser.json());
+app.use('/admin',adminRoutes);
 
 module.exports = app;
